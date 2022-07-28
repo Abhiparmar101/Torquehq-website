@@ -14,6 +14,11 @@ app.get('/roadmap',function(req,res){
     res.render('pages/roadmap');
 });
 
-Port=8181;
-app.listen(Port);
-console.log(`Server Is Running on ${Port}`);
+// Port=8181;
+// app.listen(Port);
+// console.log(`Server Is Running on ${Port}`);
+
+const port = process.env.PORT || 3000;
+app.listen(port, function() {
+    console.log("server started successfully");
+})
